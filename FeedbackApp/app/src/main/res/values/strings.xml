@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">Feedback App</string>
     <string name="action_settings">Settings</string>
+    <string-array name="courses">
+        <item>Operationeel Onderzoek</item>
+        <item>Java EE</item>
+        <item>Linux Server</item>
+        <item>Node.js</item>
+        <item>VMWare</item>
+        <item>IT Governance</item>
+        <item>Internet of Things</item>
+        <item>Native Mobile Apps</item>
+        <item>Professionele Communicatie</item>
+        <item>Cloud Development</item>
+        <item>User Experience Design</item>
+        <item>Project</item>
+    </string-array>
 </resources>
