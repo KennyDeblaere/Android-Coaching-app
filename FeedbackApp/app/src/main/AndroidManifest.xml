@@ -18,6 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".QuestionsActivity"
+            android:label="@string/title_activity_questions"
+            android:parentActivityName=".MainActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="be.howest.deblaere.kenny.feedbackapp.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

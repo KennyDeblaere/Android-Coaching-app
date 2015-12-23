@@ -1,6 +1,8 @@
 package be.howest.deblaere.kenny.feedbackapp;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
@@ -23,6 +26,7 @@ public class MainActivity extends Activity {
     private TextView feedbackNumber;
     private ProgressBar feedbackProgress;
     private ImageButton slower, faster;
+    private Button questionsButton;
     private boolean imageButtonClick;
 
     @Override
@@ -34,16 +38,29 @@ public class MainActivity extends Activity {
         feedbackProgress = (ProgressBar) findViewById(R.id.courseProgress);
         slower = (ImageButton) findViewById(R.id.slower);
         faster = (ImageButton) findViewById(R.id.faster);
+        questionsButton = (Button) findViewById(R.id.questionButton);
         imageButtonClick = true;
         fillSpinner();
         initializeProgressbar();
         addListenerToSpinner();
         initializeProgressbar();
         addListenerToButtons();
+        addListenerToQuestionButton();
     }
 
     private void initializeProgressbar() {
         feedbackProgress.setProgress(50);
+    }
+
+    private void addListenerToQuestionButton(){
+        final Context context = this;
+        questionsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, QuestionsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void fillSpinner(){
