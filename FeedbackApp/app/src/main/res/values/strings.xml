@@ -4,6 +4,7 @@
     <string name="defaultFeedback">0</string>
     <string name="questionButton">Vragen en antwoorden</string>
     <string name="questionLabel">Stel een vraag</string>
+    <string name="ask">Vraag</string>
     <string-array name="courses">
         <item>Operationeel Onderzoek</item>
         <item>Java EE</item>
