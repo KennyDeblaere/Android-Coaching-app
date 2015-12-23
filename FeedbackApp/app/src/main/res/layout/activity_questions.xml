@@ -7,7 +7,53 @@
     tools:context="be.howest.deblaere.kenny.feedbackapp.QuestionsActivity">
 <TextView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="Questionspage"/>
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="20dp"
+    android:gravity="center"
+    android:text="Questionspage"
+    android:id="@+id/courseTitle" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lstQuestions"
+        android:choiceMode="singleChoice"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/ask"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/questionLabel"
+        android:id="@+id/questionLbl"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_above="@+id/question"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/question"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/courseTitle"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Vraag"
+        android:id="@+id/ask"
+        android:layout_below="@+id/question"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

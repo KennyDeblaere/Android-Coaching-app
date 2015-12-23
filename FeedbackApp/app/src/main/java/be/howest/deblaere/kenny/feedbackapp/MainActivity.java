@@ -58,6 +58,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, QuestionsActivity.class);
+                intent.putExtra("course", courseSpinner.getSelectedItem().toString());
                 startActivity(intent);
             }
         });
@@ -73,7 +74,6 @@ public class MainActivity extends Activity {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //feedbackNumber.setText(courseSpinner.getSelectedItem().toString());
                 feedbackNumber.setText(R.string.defaultFeedback);
                 initializeProgressbar();
             }
@@ -99,8 +99,6 @@ public class MainActivity extends Activity {
             }
         };
     }
-
-
 
     private View.OnClickListener clickEvent(final int number) {
         return new View.OnClickListener() {
