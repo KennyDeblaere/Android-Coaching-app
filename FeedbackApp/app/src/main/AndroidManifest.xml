@@ -8,13 +8,17 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <receiver android:name=".QuestionReceiver">
+            <intent-filter>
+                <action android:name="be.howest.deblaere.kenny.feedbackapp.CUSTOM_INTENT"></action>
+            </intent-filter>
+        </receiver>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

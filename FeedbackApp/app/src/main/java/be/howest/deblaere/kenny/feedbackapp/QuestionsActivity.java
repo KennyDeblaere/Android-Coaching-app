@@ -22,10 +22,10 @@ import java.util.List;
 
 public class QuestionsActivity extends Activity {
     private TextView course;
-    private ListView questions;
+    private static ListView questions;
     private EditText question;
     private Button ask;
-    private List<String> questionList;
+    private static List<String> questionList;
     private Intent intent;
 
     @Override
@@ -66,20 +66,28 @@ public class QuestionsActivity extends Activity {
     }
 
     private void addListenerToAsk(){
-        final Context context = this;
         ask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 questionList.add((String) question.getText().toString());
-                ArrayAdapter<String> adapter =
-                        new ArrayAdapter<String>(context,
-                                android.R.layout.simple_list_item_1,
-                                android.R.id.text1,
-                                questionList);
-                questions.setAdapter(adapter);
-                adapter.notifyDataSetChanged();
+                Intent broadcast = new Intent();
+                broadcast.setAction("be.howest.deblaere.kenny.feedbackapp.CUSTOM_INTENT");
+                broadcast.putExtra("question", (String) question.getText().toString());
+                sendBroadcast(broadcast);
+                //finish();
+                //startActivity(getIntent());
             }
         });
+    }
+
+    public static void addToListview(String question, Context context){
+        ArrayAdapter<String> adapter =
+                new ArrayAdapter<>(context,
+                        android.R.layout.simple_list_item_1,
+                        android.R.id.text1,
+                        questionList);
+        questions.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
     }
 
 }
