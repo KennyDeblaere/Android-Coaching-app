@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="be.howest.deblaere.kenny.feedbackapp.QuestionsActivity">
+    tools:context="be.howest.deblaere.kenny.feedbackapp.ResponseActivity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,35 +12,35 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
         android:gravity="center"
-        android:text="Questionspage"
-        android:id="@+id/courseTitle" />
+        android:text="Question and Answers"
+        android:id="@+id/questionTitle" />
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lstQuestions"
+        android:id="@+id/lstAnswers"
         android:choiceMode="singleChoice"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_below="@+id/ask"
+        android:layout_below="@+id/answerBtn"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/questionLabel"
-        android:id="@+id/questionLbl"
+        android:text="@string/answerLabel"
+        android:id="@+id/answerLbl"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_above="@+id/question"
+        android:layout_above="@+id/answer"
         android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/question"
+        android:id="@+id/answer"
         android:layout_margin="5dp"
-        android:layout_below="@+id/courseTitle"
+        android:layout_below="@+id/questionTitle"
         android:layout_alignParentStart="true" />
 
     <Button
@@ -51,9 +51,9 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="15dp"
-        android:text="@string/ask"
-        android:id="@+id/ask"
-        android:layout_below="@+id/question"
+        android:text="@string/answerButton"
+        android:id="@+id/answerBtn"
+        android:layout_below="@+id/answer"
         android:layout_alignParentStart="true" />
 
 </RelativeLayout>

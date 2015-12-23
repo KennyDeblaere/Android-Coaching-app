@@ -27,6 +27,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="be.howest.deblaere.kenny.feedbackapp.MainActivity" />
         </activity>
+        <activity
+            android:name=".ResponseActivity"
+            android:label="@string/title_activity_response"
+            android:parentActivityName=".QuestionsActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="be.howest.deblaere.kenny.feedbackapp.QuestionsActivity" />
+        </activity>
     </application>
 
 </manifest>

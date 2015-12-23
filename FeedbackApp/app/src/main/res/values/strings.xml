@@ -3,7 +3,9 @@
     <string name="action_settings">Settings</string>
     <string name="defaultFeedback">0</string>
     <string name="questionButton">Vragen en antwoorden</string>
+    <string name="answerButton">Antwoord</string>
     <string name="questionLabel">Stel een vraag</string>
+    <string name="answerLabel">Geef een antwoord</string>
     <string name="ask">Vraag</string>
     <string-array name="courses">
         <item>Operationeel Onderzoek</item>
@@ -24,5 +26,11 @@
         <item>Hoe zeg je strand nou weer in het Spaans?</item>
         <item>Hoe doe je een databaseconnectie?</item>
     </string-array>
+    <string-array name="strandAnswers">
+        <item>Que?</item>
+        <item>Dondé esta la playa?</item>
+        <item>El mar</item>
+    </string-array>
     <string name="title_activity_questions">QuestionsActivity</string>
+    <string name="title_activity_response">ResponseActivity</string>
 </resources>
