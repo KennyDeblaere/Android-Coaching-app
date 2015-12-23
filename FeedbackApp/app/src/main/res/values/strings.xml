@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Feedback App</string>
     <string name="action_settings">Settings</string>
+    <string name="defaultFeedback">0</string>
     <string-array name="courses">
         <item>Operationeel Onderzoek</item>
         <item>Java EE</item>
